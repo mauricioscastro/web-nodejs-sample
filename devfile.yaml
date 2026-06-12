@@ -1,12 +1,9 @@
-schemaVersion: 2.2.2
+schemaVersion: 2.2.0
 metadata:
-  name: image-copy-test
+  name: copy-test
 components:
-  - name: image-copy-test
-    container: quay.io/mauriciosantiagodecastro/devspaces-test-copy
-      image: 
-      endpoints: []
-      memoryLimit: 1G
+  - name: copy-test
+    container:
+      image: quay.io/mauriciosantiagodecastro/devspaces-test-copy
       mountSources: true
-
-commands: []
+      memoryLimit: 1G
