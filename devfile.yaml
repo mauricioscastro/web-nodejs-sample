@@ -1,9 +1,17 @@
 schemaVersion: 2.2.0
 metadata:
-  name: copy-test
+  name: test-script-devfile
 components:
-  - name: copy-test
+  - name: tools
     container:
       image: quay.io/mauriciosantiagodecastro/devspaces-test-copy
+      memoryLimit: 512Mi
       mountSources: true
-      memoryLimit: 1G
+      command: ['tail', '-f', '/dev/null']
+commands:
+  - id: run-test-script
+    exec:
+      component: tools
+      commandLine: 'echo "Creating and running test script..." && echo "Hello from Eclipse Che!" > run_test.sh && chmod +x run_test.sh && ./run_test.sh'
+      workingDir: '${PROJECTS_ROOT}'
+
