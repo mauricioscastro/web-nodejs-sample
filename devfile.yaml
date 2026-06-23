@@ -10,7 +10,7 @@ components:
       command: ['tail', '-f', '/dev/null']
       env:
       - name: KUBEDOCK_ENABLED
-        value: true
+        value: "true"
 commands:
   - id: run-test-script
     exec:
