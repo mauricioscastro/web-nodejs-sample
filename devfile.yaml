@@ -11,11 +11,6 @@ components:
     env:
     - name: KUBEDOCK_ENABLED
       value: true
-=======
-      env:
-      - name: KUBEDOCK_ENABLED
-        value: true
->>>>>>> 26766765738397485bfc371ac21969b8c455d5c4
 commands:
   - id: run-test-script
     exec:
