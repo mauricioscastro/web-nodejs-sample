@@ -5,7 +5,7 @@ components:
   - name: tools
     container:
       #image: quay.io/mauriciosantiagodecastro/devspaces-test-copy
-      image: registry.redhat.io/devspaces/udi-rhel9:3.28.2-1780929707
+      image: quay.io/mauriciosantiagodecastro/udi-test
       memoryLimit: 512Mi
       mountSources: true
       command: ['tail', '-f', '/dev/null']
