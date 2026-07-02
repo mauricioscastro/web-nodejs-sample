@@ -7,10 +7,16 @@ components:
       #image: quay.io/mauriciosantiagodecastro/devspaces-test-copy
       #image: quay.io/mauriciosantiagodecastro/udi-test:0.0.1
       image: quay.io/mauriciosantiagodecastro/udi-test:0.0.2
-      memoryLimit: 512Mi
-      mountSources: true
+      securityContext:
+        capabilities:
+          add:
+            - SETUID
+            - SETGID
+            - SYS_CHROOT
       command: ['tail', '-f', '/dev/null']
       # env:
+      # memoryLimit: 512Mi
+      # mountSources: true
       # - name: KUBEDOCK_ENABLED
       #   value: "true"
 commands:
