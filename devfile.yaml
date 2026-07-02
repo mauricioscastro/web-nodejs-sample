@@ -5,13 +5,13 @@ components:
   - name: tools
     container:
       #image: quay.io/mauriciosantiagodecastro/devspaces-test-copy
-      image: quay.io/mauriciosantiagodecastro/udi-test
+      image: quay.io/mauriciosantiagodecastro/udi-test:0.0.1
       memoryLimit: 512Mi
       mountSources: true
       command: ['tail', '-f', '/dev/null']
-      env:
-      - name: KUBEDOCK_ENABLED
-        value: "true"
+      # env:
+      # - name: KUBEDOCK_ENABLED
+      #   value: "true"
 commands:
   - id: run-test-script
     exec:
