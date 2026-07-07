@@ -1,21 +1,9 @@
-schemaVersion: 2.2.0
+schemaVersion: 2.3.0
 metadata:
-  name: test-script-devfile
+  name: test-dev-spaces
 components:
-  - name: tools
-    container:
-      #image: quay.io/mauriciosantiagodecastro/devspaces-test-copy
-      #image: quay.io/mauriciosantiagodecastro/udi-test:0.0.1
-      #image: quay.io/mauriciosantiagodecastro/udi-test:0.0.2
-      #image: quay.io/devfile/universal-developer-image:ubi10-latest
-      #image: quay.io/mauriciosantiagodecastro/udi-test:0.0.3
-      #image: quay.io/mauriciosantiagodecastro/udi-test:0.0.9
-      image: registry.redhat.io/devspaces/udi-rhel9:3.28.2-1780929707
-      command: ['tail', '-f', '/dev/null']
-commands:
-  - id: run-test-script
-    exec:
-      component: tools
-      commandLine: 'echo "Creating and running test script..." && echo "Hello from Eclipse Che!" > run_test.sh && chmod +x run_test.sh && ./run_test.sh'
-      workingDir: '${PROJECTS_ROOT}'
-
+- container:
+    image: 'registry.redhat.io/devspaces/udi-rhel9:3.28.2-1780929707'
+    mountSources: true
+    sourceMapping: /projects
+  name: dev-tools
