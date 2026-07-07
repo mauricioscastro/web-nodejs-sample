@@ -6,5 +6,4 @@ components:
     image: 'registry.redhat.io/devspaces/udi-rhel9:3.28.2-1780929707'
     mountSources: true
     sourceMapping: /projects
-    command: ['tail', '-f', '/dev/null']
   name: dev-tools
