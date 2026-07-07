@@ -10,6 +10,7 @@ components:
       #image: quay.io/devfile/universal-developer-image:ubi10-latest
       #image: quay.io/mauriciosantiagodecastro/udi-test:0.0.3
       image: quay.io/mauriciosantiagodecastro/udi-test:0.0.6
+      command: ['tail', '-f', '/dev/null']
 commands:
   - id: run-test-script
     exec:
