@@ -5,7 +5,7 @@ components:
 - container:
     #image: 'quay.io/mauriciosantiagodecastro/udi-test:0.1.1'
     #image: 'quay.io/s1braga/custom-udi:1.3.0'
-    image: 'quay.io/mauriciosantiagodecastro/udi-custom-brdsc:0.1.1'
+    image: 'quay.io/mauriciosantiagodecastro/udi-custom-brdsc:0.1.3'
     mountSources: true
     sourceMapping: /projects
   name: dev-tools
