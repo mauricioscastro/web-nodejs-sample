@@ -3,7 +3,8 @@ metadata:
   name: test-dev-spaces
 components:
 - container:
-    image: 'quay.io/mauriciosantiagodecastro/udi-test'
+    #image: 'quay.io/mauriciosantiagodecastro/udi-test'
+    image: 'quay.io/s1braga/custom-udi:1.3.0'
     mountSources: true
     sourceMapping: /projects
   name: dev-tools
